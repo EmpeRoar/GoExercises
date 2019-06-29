@@ -2,6 +2,7 @@ package main
 
 import (
 	"encoding/json"
+	"fmt"
 	"io/ioutil"
 	"log"
 	"net/http"
@@ -38,8 +39,33 @@ func main() {
 		log.Println(rE)
 	}
 
+	var familyList []FamilyMember
+	familyListJon := `[
+		{
+			"name":"julius",
+			"position":"father"
+		},
+		{
+			"name":"faith carmel",
+			"position":"mother"
+		},
+		{
+			"name":"Vlad",
+			"position":"eldest son"
+		}
+	]`
+	json.Unmarshal([]byte(familyListJon), &familyList)
+
+	for _, element := range familyList {
+
+		fmt.Println(element.Name, element.Position)
+	}
 }
 
+type FamilyMember struct {
+	Name     string
+	Position string
+}
 type Handbook struct {
 	name string
 }
