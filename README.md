@@ -12,3 +12,6 @@ https://tutorialedge.net/golang/consuming-restful-api-with-go/
 
 ### Just for Func
 - https://www.youtube.com/channel/UC_BzFbxG2za3bp5NRRRXJSw
+
+### JustForFunc Github
+- https://github.com/campoy/justforfunc
